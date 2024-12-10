@@ -1,16 +1,18 @@
 # Ec2Airflow
-
+Refer Link for installtion docker
 https://docs.docker.com/engine/install/rhel/
-You can install Docker Engine
+
+
+#You can install Docker Engine
 
 sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
 
-Install the Docker packages.
+#Install the Docker packages.
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo systemctl enable --now docker
 
-verify that the installation is successful by running the hello-world image:
+#verify that the installation is successful by running the hello-world image:
 sudo docker run hello-world
 
 #Set Up Airflow Directory
@@ -64,5 +66,16 @@ SELECT * FROM task_instance;
 SELECT * FROM log;
 
 #access airflow 
+
+#docker compose create admin user with admin passsword if want o create different user with diiferent role
+
+sudo docker exec -it airflow bash
+
+airflow users create \
+  --username alan \
+  --firstname alan \
+  --lastname alan \
+  --role Viewer \
+  --email alan@example.com
 
 http://ec2-public-ip:8080  
