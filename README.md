@@ -26,8 +26,11 @@ mkdir -p ./dags ./logs ./plugins   ./scripts
 sudo chmod -R 777 ./logs ./dags ./plugins ./scripts
 
 sudo mkdir -p /opt/airflow/dags/
+
 sudo mkdir -p /opt/airflow/logs/
+
 sudo mkdir -p /opt/airflow/plugins/
+
 sudo mkdir -p /opt/airflow/scripts/
 
 #run docker compose
